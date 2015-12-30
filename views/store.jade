@@ -1,0 +1,42 @@
+extends layout
+
+block content
+    #container
+      table(border='2')
+        thead
+          tr
+            th ID
+            th Manager ID
+            th Address
+            th Business Name
+            th Suburb
+            th Post code
+        - each storez in store
+          tr
+            td(contenteditable='true')=storez.buildingid 
+            td(contenteditable='true')=storez.managerid 
+            td(contenteditable='true')=storez.street_name 
+            td(contenteditable='true')=storez.storename
+            td(contenteditable='true')=storez.surburb
+            td(contenteditable='true')=storez.postcode
+                  table
+form(method='POST', action='/')
+        input(type='text', name='buildingid', placeholder='ID')
+        input(type='text', name='managerid', placeholder='manager id')
+        input(type='text', name='streetname',placeholder='street name')
+        input(type='text', name='storename',placeholder='store name')
+        input(type='text', name='surburb',placeholder='suburb')
+        input(type='text', name='postcode',placeholder='postcode')
+        input(type='submit', value='send')
+      
+      form(method='DELETE', action='/')
+        input(type='text', name='buildingid', placeholder='ID')
+        input(type='text', name='managerid', placeholder='manager id')
+        input(type='text', name='streetname',placeholder='street name')
+        input(type='text', name='storename',placeholder='store name')
+        input(type='text', name='surburb',placeholder='suburb')
+        input(type='text', name='postcode',placeholder='postcode')
+        input(type='submit', value='send')
+
+        
+          

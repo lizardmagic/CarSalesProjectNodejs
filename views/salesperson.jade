@@ -1,0 +1,48 @@
+extends layout
+
+block content
+    #container
+      table(border='2')
+        thead
+          tr
+            th ID
+            th First Name 
+            th Last Name
+        - each sale in salesperson
+          tr
+            td(contenteditable='true')=sale.idsalesperson
+            td(contenteditable='true')=sale.sales_first_name 
+            td(contenteditable='true')=sale.saleslast_name
+            td(contenteditable='true')=sale.phone_number
+            td(contenteditable='true')=sale.address 
+            td(contenteditable='true')=sale.suburb
+            td(contenteditable='true')=Emgerency_person_first_name
+            td(contenteditable='true')=sale.Emgerency_person_last_name 
+            td(contenteditable='true')=sale.Emgerency_person_phone_number
+                  table
+form(method='POST', action='/')
+        input(type='text', name='idsalesperson', placeholder='ID')
+        input(type='text', name='sales_first_name', placeholder='first name')
+        input(type='text', name='sales_last_name',placeholder='last name')
+        input(type='text', name='phone_number',placeholder='phone number')
+        input(type='text', name='address',placeholder='address')
+        input(type='text', name='suburb',placeholder='address')
+        input(type='text', name='Emgerency_person_first_name',placeholder='Emergency contact')
+        input(type='text', name='Emgerency_person_last_name',placeholder='Emergency contact')
+        input(type='text', name='Emgerency_person_phone_number',placeholder='Emergency contact number')
+        input(type='submit', value='send')
+      
+      form(method='DELETE', action='/')
+         input(type='text', name='idsalesperson', placeholder='ID')
+        input(type='text', name='sales_first_name', placeholder='first name')
+        input(type='text', name='sales_last_name',placeholder='last name')
+        input(type='text', name='phone_number',placeholder='phone number')
+        input(type='text', name='address',placeholder='address')
+        input(type='text', name='suburb',placeholder='address')
+        input(type='text', name='Emgerency_person_first_name',placeholder='Emergency contact')
+        input(type='text', name='Emgerency_person_last_name',placeholder='Emergency contact')
+        input(type='text', name='Emgerency_person_phone_number',placeholder='Emergency contact number')
+        input(type='submit', value='send')
+
+        
+          

@@ -1,0 +1,25 @@
+{
+  "development": {
+    "database": "CarSalesQld",
+    "username": "root",
+    "password": "pass",   
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+
+  },
+  "test": {
+    "database": "CarSalesQld",
+    "username": "root",
+    "password": "pass",   
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+
+  },
+  "production": {
+    "database": "CarSalesQld",
+    "username": "root",
+    "password": "pass",   
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}
